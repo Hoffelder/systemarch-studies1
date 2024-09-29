@@ -1,0 +1,10 @@
+apiVersion: v1alpha2 # Verifique se esta versão é suportada
+kind: Image
+metadata:
+  name: my-app-image
+spec:
+  packages:
+  - my-app # Verifique se este pacote está disponível
+  # Adicione outras configurações conforme necessário, como:
+  # environment:
+  #   MY_ENV_VAR: "value"

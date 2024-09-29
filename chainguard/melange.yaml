@@ -1,0 +1,10 @@
+apiVersion: v1alpha1 # Verifique se esta versão é suportada
+kind: Package
+metadata:
+  name: my-app
+spec:
+  build:
+    commands:
+    - apk add --no-cache my-app-dependencies # Verifique se o pacote existe
+    - chmod +x /app/my-app # Garanta que o executável tenha permissões
+  entrypoint: /app/my-app # Confirme se o caminho está correto
