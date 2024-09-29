@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  nginx.conf: "http {\n  server {\n    listen 80;\n    location / {\n      proxy_pass http://my-app-service:80;\n      #magic___^_^___line\n    } \n  }  \n}\n"
