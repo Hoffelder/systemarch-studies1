@@ -1,0 +1,20 @@
+receivers:
+  oltp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+
+
+exporters:
+  logging:
+    longLevel: debug
+
+service:
+  pipelines:
+    traces:
+      receivers: [oltp]
+      processors: [batch]
+      exporters: [logging]
